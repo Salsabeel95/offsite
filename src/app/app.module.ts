@@ -12,12 +12,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgZorroAntdModule } from './ng-zorro-antd.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LayoutComponent } from './components/layout/layout.component';
+import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
+import { HomeComponent } from './components/home/home.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LayoutComponent,
+    SidemenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
