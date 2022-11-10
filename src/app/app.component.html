@@ -1,6 +1,6 @@
 <nz-layout>
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo">Offsite</div>
+    <div class="logo text-success text-center display-6 m-4" [class]="isCollapsed?'d-none':'d-block'">Offsite</div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
       <li nz-submenu nzTitle="User" nzIcon="user">
         <ul>
