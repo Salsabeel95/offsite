@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 
 registerLocaleData(en);
 
@@ -23,7 +24,8 @@ registerLocaleData(en);
     AppComponent,
     LayoutComponent,
     SidemenuComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
