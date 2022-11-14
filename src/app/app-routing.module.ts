@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { PageNotFoundComponent } from './components/pageNotFound/pageNotFound.component';
 import { PlaygroundsComponent } from './components/playgrounds/playgrounds.component';
 
 const routes: Routes = [
@@ -9,8 +10,8 @@ const routes: Routes = [
     { path:"home" , component:HomeComponent},
     { path: '',   redirectTo: '/home', pathMatch: 'full' }, 
     { path:"list" , component:PlaygroundsComponent},
+    { path: '**', component: PageNotFoundComponent },
   ]},
-  // { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

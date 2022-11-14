@@ -1,0 +1,34 @@
+<div style=" padding: 30px;">
+  <nz-row  class="mb-3" nzJustify="center" [nzGutter]="16">
+    <nz-col [nzSpan]="12">
+        <nz-card>
+        <nz-statistic [nzValue]="(1128 | number)!" [nzTitle]="'Feedback'" ></nz-statistic>
+        <!-- <ng-template #prefixTpl><span nz-icon nzType="like"></span></ng-template> -->
+      </nz-card>
+      </nz-col>
+      
+      <nz-col [nzSpan]="12">
+        <nz-card>
+        <nz-statistic [nzValue]="93" [nzTitle]="'Unmerged'" [nzSuffix]="'/ 100'"></nz-statistic>
+      </nz-card>
+      </nz-col>
+  </nz-row>
+
+  <nz-row  nzJustify="center" [nzGutter]="16">
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <!-- [nzPrefix]="prefixTplOne" -->
+        <nz-statistic [nzValue]="(11.28 | number: '1.0-2')!" [nzTitle]="'Active'" [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#3F8600' }"></nz-statistic>
+        <ng-template #prefixTplOne><span nz-icon nzType="arrow-up"></span></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic [nzValue]="(9.3 | number: '1.0-2')!" [nzTitle]="'Idle'" [nzPrefix]="prefixTplTwo" [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#CF1322' }"></nz-statistic>
+        <ng-template #prefixTplTwo><span nz-icon nzType="arrow-down"></span></ng-template>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+</div>

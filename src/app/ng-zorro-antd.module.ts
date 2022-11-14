@@ -72,7 +72,7 @@ import { NzResizableModule } from 'ng-zorro-antd/resizable';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
 // import { NzCodeEditorModule } from 'ng-zorro-antd/code-editor';
 // import { NzGraphModule } from 'ng-zorro-antd/graph';
-
+import { NzSpaceModule } from 'ng-zorro-antd/space';
 @NgModule({
   exports: [
     NzAffixModule,
@@ -124,7 +124,7 @@ import { NzPipesModule } from 'ng-zorro-antd/pipes';
     NzSelectModule,
     NzSkeletonModule,
     NzSliderModule,
-    NzSpinModule,
+    NzSpinModule,NzSpaceModule,
     NzStatisticModule,
     NzStepsModule,
     NzSwitchModule,

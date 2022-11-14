@@ -16,6 +16,8 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PageNotFoundComponent } from './components/pageNotFound/pageNotFound.component';
+import { StatisticComponent } from './components/Statistic/Statistic.component';
 
 registerLocaleData(en);
 
@@ -25,7 +27,9 @@ registerLocaleData(en);
     LayoutComponent,
     SidemenuComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    PageNotFoundComponent,
+    StatisticComponent
   ],
   imports: [
     BrowserModule,
