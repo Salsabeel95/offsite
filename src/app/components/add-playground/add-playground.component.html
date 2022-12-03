@@ -1,0 +1,94 @@
+<form nz-form [nzAutoTips]="autoTips" [formGroup]="playgroundFormData" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>playground name</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzValidatingTip="Validating...">
+      <input nz-input formControlName="playgroundName" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Owner name</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzValidatingTip="Validating...">
+      <input nz-input formControlName="ownerName" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Description</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzValidatingTip="Validating...">
+      <input nz-input formControlName="description" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Location</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzValidatingTip="Validating...">
+      <input nz-input formControlName="location" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Hour price</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzValidatingTip="Validating...">
+      <nz-input-number formControlName="hourPrice" [nzMin]="1" [nzFormatter]="formatterPound" [nzParser]="parserPound">
+      </nz-input-number>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Closing Time</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzValidatingTip="Validating...">
+      <nz-time-picker nzSize="large" formControlName="closingTime" nzFormat="HH:mm">
+      </nz-time-picker>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Opening Time</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzValidatingTip="Validating...">
+      <nz-time-picker nzSize="large" formControlName="openingTime" nzFormat="HH:mm">
+      </nz-time-picker>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>upload some pictures</nz-form-label>
+  <nz-form-control  [nzSpan]="12">
+      <nz-upload  [nzLimit]="2"
+      [nzSize]="200"
+      [nzFileType]="'image/png,image/jpeg,image/gif,image/bmp'"
+      nzAction="https://run.mocky.io/v3/082d6e6e-9d6c-4f66-a06a-fd48150cf4fc" (nzChange)="handleChange($event)" nzListType="picture" [(nzFileList)]="fileList1">
+        <button nz-button>
+          <span nz-icon nzType="upload"></span>
+          Upload
+        </button>
+      </nz-upload>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Mobile</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="mobile" placeholder="mobile number for reservations" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>E-mail</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="email" placeholder="email" type="email" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Password</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzDisableAutoTips nzErrorTip="Please input your password!">
+      <input nz-input type="password" formControlName="password" (ngModelChange)="validateConfirmPassword()" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Confirm Password</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzDisableAutoTips [nzErrorTip]="passwordErrorTpl">
+      <input nz-input type="password" formControlName="confirm" placeholder="confirm your password" />
+      <ng-template #passwordErrorTpl let-control>
+        <ng-container *ngIf="control.hasError('required')">Please confirm your password!</ng-container>
+        <ng-container *ngIf="control.hasError('confirm')">Password is inconsistent!</ng-container>
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzOffset]="7" [nzSpan]="12">
+      <button nz-button nzType="primary">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

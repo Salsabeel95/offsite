@@ -7,7 +7,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgZorroAntdModule } from './ng-zorro-antd.module';
@@ -18,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PageNotFoundComponent } from './components/pageNotFound/pageNotFound.component';
 import { StatisticComponent } from './components/Statistic/Statistic.component';
+import { AddPlaygroundComponent } from './components/add-playground/add-playground.component';
 
 registerLocaleData(en);
 
@@ -29,7 +30,8 @@ registerLocaleData(en);
     HomeComponent,
     HeaderComponent,
     PageNotFoundComponent,
-    StatisticComponent
+    StatisticComponent,
+    AddPlaygroundComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NgZorroAntdModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
