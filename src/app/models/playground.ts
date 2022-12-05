@@ -2,15 +2,15 @@ export class Playground{
         closingTime:string
         openingTime:string
         constructor(
-        private name:string,
-        private owner:string,
-        private email:string,
-        private password:string,
-        private hourPrice:number,
-        private phone:string,
-        private location:string,
-        private description:string,
-        private image:string,
+        public name:string,
+        public owner:string,
+        public email:string,
+        public password:string,
+        public hourPrice:number,
+        public phone:string,
+        public location:string,
+        public description:string,
+        public image:string,
          _openingTime:Date,
          _closingTime:Date){
                 this.closingTime=_closingTime.toLocaleTimeString("en-EN",{ hour12: false, hour: '2-digit', minute: '2-digit' })

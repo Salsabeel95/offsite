@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PageNotFoundComponent } from './components/pageNotFound/pageNotFound.component';
 import { StatisticComponent } from './components/Statistic/Statistic.component';
 import { AddPlaygroundComponent } from './components/add-playground/add-playground.component';
+import { PlaygroundsComponent } from './components/playgrounds/playgrounds.component';
 
 registerLocaleData(en);
 
@@ -31,7 +32,8 @@ registerLocaleData(en);
     HeaderComponent,
     PageNotFoundComponent,
     StatisticComponent,
-    AddPlaygroundComponent
+    AddPlaygroundComponent,
+    PlaygroundsComponent
   ],
   imports: [
     BrowserModule,
